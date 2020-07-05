@@ -1,5 +1,5 @@
 # kickstart-nestJs
-* Simple Todo APIs project with registration and authentication *
+*Simple Todo APIs project with registration and authentication*
 
 
 ***Built with:***
