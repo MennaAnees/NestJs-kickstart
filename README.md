@@ -11,5 +11,5 @@
 
 ***How to start it:***  
 - run ```npm i```
-- run ```npm start``
+- run ```npm start```
 
