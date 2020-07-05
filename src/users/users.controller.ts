@@ -10,7 +10,7 @@ import { Controller,
     Delete, 
     Param } from '@nestjs/common';
 
-import { UsersService } from './users.service';
+import { UsersService } from './service/users.service';
 import { CreateUserDTO } from './dto/create-user.dto';
 
 @Controller('users')

@@ -12,9 +12,9 @@ import {
     UseGuards
 } from '@nestjs/common';
 
-import { TasksService } from './tasks.service';
+import { TasksService } from './service/tasks.service';
 import { CreateTaskDTO } from './dto/create-task.dto';
-import { JwtAuthGuard } from '../auth/jwt-auth.guard';
+import { JwtAuthGuard } from '../auth/guards/jwt-auth.guard';
 
 @Controller('tasks')
 export class TasksController {
@@ -39,6 +39,7 @@ export class TasksController {
         return res.status(HttpStatus.OK).json(tasks);
     }
 
+    // get one task
     @UseGuards(JwtAuthGuard)
     @Get(':taskId')
     async getTask(@Res() res, @Param('taskId') taskId) {
@@ -47,6 +48,7 @@ export class TasksController {
         return res.status(HttpStatus.OK).json(task);
     }
 
+    //update task
     @UseGuards(JwtAuthGuard)
     @Put(':taskId')
     async updateTask(@Res() res, @Param('taskId') taskId, @Body() createTaskDTO: CreateTaskDTO) {
@@ -58,6 +60,7 @@ export class TasksController {
         });
     }
 
+    // delete a task
     @UseGuards(JwtAuthGuard)
     @Delete('/:taskId')
     async deleteCustomer(@Res() res, @Param('taskId') taskId) {
