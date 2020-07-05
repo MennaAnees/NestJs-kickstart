@@ -1,14 +1,9 @@
-import { Controller, 
-    Get, 
+import { Controller,
     Res, 
     HttpStatus, 
     Post, 
-    Body, 
-    Put, 
-    Query, 
-    NotFoundException, 
-    Delete, 
-    Param } from '@nestjs/common';
+    Body
+ } from '@nestjs/common';
 
 import { UsersService } from './service/users.service';
 import { CreateUserDTO } from './dto/create-user.dto';

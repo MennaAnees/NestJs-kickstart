@@ -31,7 +31,70 @@
 					]
 				}
 			},
-			"response": []
+			"response": [
+				{
+					"name": "localhost:3000/users/register",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"username\":\"user1@yahoo.com\",\n \"password\":\"pass\"\n }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/users/register",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"users",
+								"register"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "199"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"c7-a4nSZ6xWqvE0aAGm/r8XRvKW9Fs\""
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 05 Jul 2020 19:17:56 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"User has registered successfully\",\n    \"user\": {\n        \"_id\": \"5f022764b5b36a2a448352a2\",\n        \"username\": \"user1@yahoo.com\",\n        \"password\": \"$2b$10$GEeFB5z4pXd9af0D/Q0UieJP/nv2zlrQXgfvMfFU2NbnHNbLhWCb2\",\n        \"__v\": 0\n    }\n}"
+				}
+			]
 		},
 		{
 			"name": "localhost:3000/auth/login",
@@ -59,7 +122,70 @@
 					]
 				}
 			},
-			"response": []
+			"response": [
+				{
+					"name": "localhost:3000/auth/login",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"username\":\"user1@yahoo.com\",\n \"password\":\"pass\"\n }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/auth/login",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"auth",
+								"login"
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "147"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"93-18s+16/iGF2gGas8fbagYUjUip0\""
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 05 Jul 2020 19:18:19 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"access_token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE1OTM5NzY2OTksImV4cCI6MTU5Mzk3Njc1OX0.lYVsh2-rkPI2OKb5nnslRkOcYwJh45WQSjDTR-KpD04\"\n}"
+				}
+			]
 		},
 		{
 			"name": "localhost:3000/tasks/addTask",
@@ -104,7 +230,77 @@
 					]
 				}
 			},
-			"response": []
+			"response": [
+				{
+					"name": "localhost:3000/tasks/addTask",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE1OTM5MjA5MTAsImV4cCI6MTU5MzkyMDk3MH0.t7a0JUWp6TVjznfKWS1s0musdb2oILST-5i8qoUwJ0U",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"title\":\"task1\" }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/tasks/addTask",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"tasks",
+								"addTask"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "103"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"67-5d2myKJH6Ai4AI94aaU8axDyNWQ\""
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 05 Jul 2020 19:18:45 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"Task added successfully\",\n    \"task\": {\n        \"_id\": \"5f022795b5b36a2a448352a3\",\n        \"title\": \"task1\",\n        \"__v\": 0\n    }\n}"
+				}
+			]
 		},
 		{
 			"name": "localhost:3000/tasks",
@@ -144,7 +340,69 @@
 					]
 				}
 			},
-			"response": []
+			"response": [
+				{
+					"name": "localhost:3000/tasks",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"title\":\"new\" }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/tasks",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"tasks"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "118"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"76-I2cYLEaoLdgVgPoIYQZjZ8N94JY\""
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 05 Jul 2020 19:19:00 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"_id\": \"5f01552f25c9bdb049aed990\",\n        \"title\": \"task\",\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"5f022795b5b36a2a448352a3\",\n        \"title\": \"task1\",\n        \"__v\": 0\n    }\n]"
+				}
+			]
 		},
 		{
 			"name": "localhost:3000/tasks/5f01514a47e6197e5404ce62",
@@ -185,7 +443,70 @@
 					]
 				}
 			},
-			"response": []
+			"response": [
+				{
+					"name": "localhost:3000/tasks/5f01514a47e6197e5404ce62",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"title\":\"new\" }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/tasks/5f022795b5b36a2a448352a3",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"tasks",
+								"5f022795b5b36a2a448352a3"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "58"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"3a-Nnx6xwAR3+2qkH40mfX3+kstSG4\""
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 05 Jul 2020 19:19:40 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"_id\": \"5f022795b5b36a2a448352a3\",\n    \"title\": \"task1\",\n    \"__v\": 0\n}"
+				}
+			]
 		},
 		{
 			"name": "localhost:3000/tasks/5f01514a47e6197e5404ce62",
@@ -223,7 +544,70 @@
 					]
 				}
 			},
-			"response": []
+			"response": [
+				{
+					"name": "localhost:3000/tasks/5f01514a47e6197e5404ce62",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"title\":\"updated\" }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/tasks/5f022795b5b36a2a448352a3",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"tasks",
+								"5f022795b5b36a2a448352a3"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "116"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"74-VOZNVkluMykcmas/AJjWAKbgtuM\""
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 05 Jul 2020 19:19:57 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"Task has been successfully updated\",\n    \"task\": {\n        \"_id\": \"5f022795b5b36a2a448352a3\",\n        \"title\": \"updated\",\n        \"__v\": 0\n    }\n}"
+				}
+			]
 		},
 		{
 			"name": "localhost:3000/tasks/5f01514a47e6197e5404ce62",
@@ -261,7 +645,70 @@
 					]
 				}
 			},
-			"response": []
+			"response": [
+				{
+					"name": "localhost:3000/tasks/5f01514a47e6197e5404ce62",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/tasks/5f022795b5b36a2a448352a3",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"tasks",
+								"5f022795b5b36a2a448352a3"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "103"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"67-fUjWXceIXhAiEJ9b6/RkzwQnL60\""
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 05 Jul 2020 19:20:11 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"Task has been deleted\",\n    \"task\": {\n        \"_id\": \"5f022795b5b36a2a448352a3\",\n        \"title\": \"updated\",\n        \"__v\": 0\n    }\n}"
+				}
+			]
 		}
 	],
 	"protocolProfileBehavior": {}
