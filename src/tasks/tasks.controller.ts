@@ -16,12 +16,12 @@ import { TasksService } from './service/tasks.service';
 import { CreateTaskDTO } from './dto/create-task.dto';
 import { JwtAuthGuard } from '../auth/guards/jwt-auth.guard';
 
+@UseGuards(JwtAuthGuard)
 @Controller('tasks')
 export class TasksController {
     constructor(private taskService: TasksService) { }
 
     // add task
-    @UseGuards(JwtAuthGuard)
     @Post('/addTask')
     async create(@Res() res, @Body() createTaskDTO: CreateTaskDTO) {
         const task = await this.taskService.create(createTaskDTO);
@@ -32,7 +32,6 @@ export class TasksController {
     }
 
     // Retrieve tasks list
-    @UseGuards(JwtAuthGuard)
     @Get()
     async getAllTasks(@Res() res) {
         const tasks = await this.taskService.getAllTasks();
@@ -40,7 +39,6 @@ export class TasksController {
     }
 
     // get one task
-    @UseGuards(JwtAuthGuard)
     @Get(':taskId')
     async getTask(@Res() res, @Param('taskId') taskId) {
         const task = await this.taskService.getTask(taskId);
@@ -49,7 +47,6 @@ export class TasksController {
     }
 
     //update task
-    @UseGuards(JwtAuthGuard)
     @Put(':taskId')
     async updateTask(@Res() res, @Param('taskId') taskId, @Body() createTaskDTO: CreateTaskDTO) {
         const task = await this.taskService.updateTask(taskId, createTaskDTO);
@@ -61,7 +58,6 @@ export class TasksController {
     }
 
     // delete a task
-    @UseGuards(JwtAuthGuard)
     @Delete('/:taskId')
     async deleteCustomer(@Res() res, @Param('taskId') taskId) {
         const task = await this.taskService.deleteTask(taskId);
