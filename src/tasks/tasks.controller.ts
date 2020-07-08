@@ -16,7 +16,7 @@ import { TasksService } from './service/tasks.service';
 import { CreateTaskDTO } from './dto/create-task.dto';
 import { JwtAuthGuard } from '../auth/guards/jwt-auth.guard';
 
-@UseGuards(JwtAuthGuard)
+// @UseGuards(JwtAuthGuard)
 @Controller('tasks')
 export class TasksController {
     constructor(private taskService: TasksService) { }
@@ -24,7 +24,8 @@ export class TasksController {
     // add task
     @Post('/addTask')
     async create(@Res() res, @Body() createTaskDTO: CreateTaskDTO) {
-        const task = await this.taskService.create(createTaskDTO);
+        let task = await this.taskService.create(createTaskDTO);
+
         return res.status(HttpStatus.OK).json({
             message: "Task added successfully",
             task
